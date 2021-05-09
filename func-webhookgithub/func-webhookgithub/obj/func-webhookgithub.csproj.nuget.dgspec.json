@@ -1,0 +1,68 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\layane.costa\\OneDrive - VENHA PRA NUVEM\\Documentos\\Layane\\Estudo\\azure\\func-webhook\\func-webhookgithub\\func-webhookgithub\\func-webhookgithub.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\layane.costa\\OneDrive - VENHA PRA NUVEM\\Documentos\\Layane\\Estudo\\azure\\func-webhook\\func-webhookgithub\\func-webhookgithub\\func-webhookgithub.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\layane.costa\\OneDrive - VENHA PRA NUVEM\\Documentos\\Layane\\Estudo\\azure\\func-webhook\\func-webhookgithub\\func-webhookgithub\\func-webhookgithub.csproj",
+        "projectName": "func-webhookgithub",
+        "projectPath": "C:\\Users\\layane.costa\\OneDrive - VENHA PRA NUVEM\\Documentos\\Layane\\Estudo\\azure\\func-webhook\\func-webhookgithub\\func-webhookgithub\\func-webhookgithub.csproj",
+        "packagesPath": "C:\\Users\\layane.costa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\layane.costa\\OneDrive - VENHA PRA NUVEM\\Documentos\\Layane\\Estudo\\azure\\func-webhook\\func-webhookgithub\\func-webhookgithub\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\layane.costa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.NET.Sdk.Functions": {
+              "target": "Package",
+              "version": "[3.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
