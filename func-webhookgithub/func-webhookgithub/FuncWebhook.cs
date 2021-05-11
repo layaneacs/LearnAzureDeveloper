@@ -20,14 +20,32 @@ namespace func_webhookgithub
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
+
             if (data != null)
             {
-                string title = data.pages[0].title.ToString();
-                string action = data.pages[0].action.ToString();
-                string eventGit = req.Headers["x-github-event"].ToString();
+                string githubEvent = req.Headers["x-github-event"].ToString();             
+                string msg;
 
-                string msg = "Page is " + title + ", Action is " + action + ", Event Type is " + eventGit;
+                if (githubEvent.Equals("push")) 
+                {
+                    var commit = data["head_commit"].message.ToString(); ;
+                    var idCommit = data["head_commit"].id.ToString();
+                    var userPush = data["head_commit"].author.name.ToString(); 
 
+                    msg = "Novo push recebido. \nCommit: " + commit + " \nId: " + idCommit + "\nFeito por: " + userPush;                    
+                }
+                else if (githubEvent.Equals("gollum")) 
+                {
+                    var title = data.pages[0].title.ToString();
+                    var action = data.pages[0].action.ToString();
+                    
+                    msg = "A página " + title + " do Wiki foi " + action;
+                } 
+                else
+                {
+                    msg = "Evento não configurado: " + githubEvent;
+                }
+               
                 string responseMessage = string.IsNullOrEmpty(msg) ? "Invalid event" : msg;
 
                 return new OkObjectResult(responseMessage);
